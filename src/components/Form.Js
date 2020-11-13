@@ -19,16 +19,15 @@ export default function Form(props) {
             <div>
                 <h2>Add a User</h2>
 
-                <button disabled={disabled} id="submitBtn">submit</button>
-
                 <div>
-                    <div>{errors.name}</div>
-                    <div>{errors.email}</div>
-                    <div>{errors.password}</div>
+                    <div className="errors">{errors.name}</div>
+                    <div className="errors">{errors.email}</div>
+                    <div className="errors">{errors.password}</div>
+                    <div className="errors">{errors.terms}</div>
                 </div>
             </div>
 
-            <div>
+            <div style={{ maxWidth: 300 }}>
                 <h4>Sign Up</h4>
                 <label>
                     Name
@@ -37,6 +36,7 @@ export default function Form(props) {
                         onChange={onChange}
                         name="name"
                         type="text"
+                        placeholder="Enter name"
                     />
                 </label>
 
@@ -47,6 +47,7 @@ export default function Form(props) {
                         onChange={onChange}
                         name="email"
                         type="text"
+                        placeholder="Enter email"
                     />
                 </label>
 
@@ -57,6 +58,7 @@ export default function Form(props) {
                         onChange={onChange}
                         name="password"
                         type="text"
+                        placeholder="Enter password"
                     />
                 </label>
 
@@ -69,6 +71,9 @@ export default function Form(props) {
                         onChange={onChange}
                     />
                 </label>
+
+                <button disabled={disabled} id="submitBtn">Submit</button>
+
             </div>
         </form>
     )
