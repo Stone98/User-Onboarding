@@ -14,6 +14,7 @@ const initialFormErrors = {
   name: "",
   email: "",
   password: "",
+  terms: "",
 };
 const initialUsers = [];
 const initialDisabled = true;
@@ -78,7 +79,7 @@ export default function App() {
   return (
     <div>
       <header>
-        <h1>User Onboarding</h1>
+        <h1 style={{ width: '100%' }}>User Onboarding</h1>
       </header>
 
       <Form
